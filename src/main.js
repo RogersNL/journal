@@ -1,4 +1,4 @@
-import './journal';
+import { Entry } from './journal.js';
 import './styles.css';
 
 $(document).ready(function() {
@@ -7,7 +7,7 @@ $(document).ready(function() {
     var title = $('#title').val();
     var body = $('#journal-body').val();
     var newEntry = new Entry(title, body);
-    $("#journal-data").Append("<tr>" +
+    $("#journal-data").append("<tr>" +
                                 "<td>" + newEntry.title + "</td>" +
                                 "<td>" + newEntry.wordCount() + "</td>" +
                                 "<td>" + newEntry.vowelCount() + "</td>" +
