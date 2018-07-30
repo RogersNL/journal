@@ -1,4 +1,4 @@
-function Entry(title, body) {
+export function Entry(title, body) {
   this.title = title;
   this.body = body;
 }
@@ -41,7 +41,7 @@ Entry.prototype.consonantCount = function() {
   return count;
 };
 Entry.prototype.getTeaser = function() {
-  if(this.body.split(".")[0].split(" ").length > 8){
+  if(this.body.split(".")[0].split(" ").length < 8){
     return this.body.split(".")[0] + ".";
   }
   else {
